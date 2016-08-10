@@ -6,5 +6,4 @@ RUN apk add --update \
         lighttpd \
 && rm -rf /var/cache/apk/*
 
-USER lighttpd
-CMD ["lighttpd", "-D"]
+CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
